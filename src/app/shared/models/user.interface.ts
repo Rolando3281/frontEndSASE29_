@@ -1,7 +1,7 @@
 export type Roles = 'admin' | 'operador'
 
 export interface User{
-    username : string;
+    usuario : string;
     password : string;
 }
 
