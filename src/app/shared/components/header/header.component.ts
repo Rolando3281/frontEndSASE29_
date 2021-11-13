@@ -21,11 +21,8 @@ export class HeaderComponent implements OnInit {
     this.toggleSidenav.emit();
   }
 
-  verificarLogeado(): void{
-    let token = localStorage.getItem('token');
-    
-    this.authSvc.isLoged(token ).subscribe(res => console.log('Esta loguedo?'));
-    //this.authSvc.(userData).subscribe( res => console.log('Login'));
+  onLogout():void{
+    this.authSvc.logout();
   }
 
 }

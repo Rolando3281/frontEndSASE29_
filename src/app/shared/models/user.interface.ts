@@ -6,9 +6,9 @@ export interface User{
 }
 
 export interface UserResponse{
-    message: string;
-    token: string;
-    res: boolean;
+    access_token: string;
+    token_type: string; 
+    expires_in: string;
 }
 
 export interface UserResponseAutenticado{

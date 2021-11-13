@@ -15,19 +15,29 @@
 
         <mat-card-content>
             <h1>LOGIN</h1>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+            
+
             <mat-form-field class="full-width-input"  color="warn" >
-                <input type="text" matInput placeholder="Username"  
-                required/>
+
+                <input type="text" 
+                formControlName="usuario"
+                matInput placeholder="usuario" required/>
 
             </mat-form-field>
 
             <mat-form-field class="full-width-input separator"  color="warn">
-                <input type="password" matInput placeholder="Password" 
-                required/>
+                <input type="password" 
+                formControlName="password"
+                matInput placeholder="Password" required/>
 
             </mat-form-field>
 
             <button type="submit" mat-raised-button color="warn" >Login</button>
+
+        </form>
 
         </mat-card-content>
        
