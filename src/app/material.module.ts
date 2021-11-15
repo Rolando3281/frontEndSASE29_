@@ -6,9 +6,11 @@ import {MatMenuModule} from  '@angular/material/menu';
 import {MatListModule} from  '@angular/material/list';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
-import {MatIconModule } from '@angular/material/icon'
+import {MatIconModule } from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import { MatSortModule } from "@angular/material/sort";
 
-const myModules = [MatToolbarModule,MatSidenavModule, MatButtonModule, MatMenuModule,MatListModule,MatInputModule,MatCardModule,MatIconModule];
+const myModules = [MatToolbarModule,MatSidenavModule, MatButtonModule, MatMenuModule,MatListModule,MatInputModule,MatCardModule,MatIconModule,MatTableModule,MatSortModule];
 
 @NgModule({
     imports: [...myModules],

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BomberosRoutingModule } from './bomberos-routing.module';
 import { BomberosComponent } from './bomberos.component';
+import { MaterialModule } from '@app/material.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { BomberosComponent } from './bomberos.component';
   ],
   imports: [
     CommonModule,
-    BomberosRoutingModule
+    BomberosRoutingModule,
+    MaterialModule
   ]
 })
 export class BomberosModule { }
