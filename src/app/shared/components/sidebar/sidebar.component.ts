@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@app/pages/auth/auth.service';
+import { UtilsService } from '@app/shared/services/utils.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authSvc:AuthService, private utilsSvc:UtilsService) { }
 
   ngOnInit(): void {
   }
 
+  onExit(): void{
+    this.authSvc.logout();
+    this.utilsSvc.openSideBar(false);
+  }
 }

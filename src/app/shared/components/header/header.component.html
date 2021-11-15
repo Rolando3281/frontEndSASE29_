@@ -1,19 +1,24 @@
 <mat-toolbar class="header">
 
-    <ng-container *ngIf="!isAdmin; else viewAdmin">
+    <ng-container *ngIf="!isLogged; else viewAdmin" >
+        
 
-   
+    </ng-container>
     
     <span>SASE29</span>
+
     <span class="spacer"></span>
     <div>
         <a *ngIf="!isLogged; else viewLogout"
         mat-button [routerLink]="'/login'" >Login</a>
+
+        <a *ngIf="isAdmin=='admin';"
+        mat-button [routerLink]="'/admin'" >Admin</a>
         
-        <a mat-button [routerLink]="'/admin'" >Admin</a>
+        
         
     </div>
-    </ng-container>
+    
 
     <!-- <button (click)="isAdmin = !isAdmin">Change</button>   -->
    
@@ -28,5 +33,6 @@
     <button mat-icon-button (click)="onToggleSidenav()">
         <mat-icon>menu</mat-icon>
     </button>
-    <span class="spacer"></span>
+    
 </ng-template>
+

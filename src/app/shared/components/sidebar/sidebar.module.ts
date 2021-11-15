@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './sidebar.component';
 
 import {MaterialModule} from '@app/material.module'
+import { RouterModule } from '@angular/router';
+import { UtilsService } from '@app/shared/services/utils.service';
 
 
 @NgModule({
@@ -11,8 +13,10 @@ import {MaterialModule} from '@app/material.module'
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
-  exports: [SidebarComponent]
+  exports: [SidebarComponent],
+  providers: [UtilsService]
 })
 export class SidebarModule { }

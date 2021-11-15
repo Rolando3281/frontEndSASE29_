@@ -9,6 +9,8 @@ export interface UserResponse{
     access_token: string;
     token_type: string; 
     expires_in: string;
+    role:string;
+    nombre: string;
 }
 
 export interface UserResponseAutenticado{
@@ -17,7 +19,7 @@ export interface UserResponseAutenticado{
     fechaCreacion: string;
     api_token: string;
     fechaToken: string;
-    rol: Roles;
+    rol: string;
     nombre: string;
     apellido: string;
 }
