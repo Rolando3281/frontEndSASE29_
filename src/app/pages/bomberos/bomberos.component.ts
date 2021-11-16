@@ -69,15 +69,14 @@ export class BomberosComponent implements AfterViewInit, OnInit {
     const dialogRef = this.dialog.open(ModalComponent,{
       height:'600px',
       width:'800px',
-      hasBackdrop: false,
+      hasBackdrop: true,
       disableClose:true,
       
       data:{title:'Agregando Bombero', bombero:bombero}
     });
-    //dialogRef.afterClosed().subscribe
+    // dialogRef.afterClosed().subscribe
   }
 
-
-  
+ 
 
 }
