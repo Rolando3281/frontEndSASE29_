@@ -3,6 +3,8 @@ import {MatTableDataSource} from '@angular/material/table';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
 import {MatSort, Sort} from '@angular/material/sort';
 import { BomberosService } from './services/bomberos.service';
+import {MatDialog} from '@angular/material/dialog';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -46,9 +48,11 @@ export class BomberosComponent implements AfterViewInit, OnInit {
 
   @ViewChild(MatSort) sort: MatSort = new MatSort();
 
-  constructor(private bomberosSvc:BomberosService) {
+  constructor(private bomberosSvc:BomberosService, private dialog: MatDialog ) {
    
   }
+
+
   ngOnInit(): void {
     //this.bomberosSvc.getAll().subscribe(res=>console.log('Bomberos->', res));
     this.bomberosSvc.getAll().subscribe((res)=>{
@@ -58,6 +62,19 @@ export class BomberosComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
+  }
+
+  onOpenModal(bombero={}):void{
+    console.log('bombero->',bombero);
+    const dialogRef = this.dialog.open(ModalComponent,{
+      height:'600px',
+      width:'800px',
+      hasBackdrop: false,
+      disableClose:true,
+      
+      data:{title:'Agregando Bombero', bombero:bombero}
+    });
+    //dialogRef.afterClosed().subscribe
   }
 
 

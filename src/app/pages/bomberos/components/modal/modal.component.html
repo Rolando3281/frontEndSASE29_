@@ -1,0 +1,71 @@
+{{data.bombero | json}}
+
+<h2 mat-dialog-title>{{data?.title}}</h2>
+
+<mat-dialog-content>
+
+    <div class="modal-form">
+
+        <form>
+
+            <mat-form-field class="full-width-input" color="warn">
+                <input matInput placeholder="Nombres" required/>
+            </mat-form-field>
+
+            <mat-form-field class="full-width-input" color="warn">
+                <input matInput placeholder="Apellidos" required/>
+            </mat-form-field>
+
+            <mat-form-field class="full-width-input" color="warn">
+                <input matInput placeholder="Email" required/>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" color="warn">
+                <mat-label>Fecha de Nacimiento</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>           
+
+            <mat-form-field class="full-width-input" color="warn">
+                <mat-label>Categoria</mat-label>
+                <mat-select>
+                    <mat-option value="Primera Clase">Primera Clase</mat-option>
+                    <mat-option value="Segunda Clase">Segunda Clase</mat-option>
+                    <mat-option value="Tercera Clase">Tercera Clase</mat-option>
+                </mat-select>
+               
+            </mat-form-field>
+
+            <mat-form-field class="full-width-input" color="warn">
+                <mat-label>Turno</mat-label>
+                <mat-select>
+                    <mat-option value="Primera Clase">Diurno</mat-option>
+                    <mat-option value="Segunda Clase">Nocturno</mat-option>
+                    <mat-option value="Tercera Clase">Fin de Semana</mat-option>
+                    <mat-option value="Tercera Clase">Permanente</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </form>
+
+    </div>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close >Cancelar</button>
+
+    <button 
+    
+    mat-raised-button 
+    [mat-dialog-close]="true"
+    color="warn"
+    (click)="onSave()"
+    ckdFocusInitial
+    >
+        Guardar
+    </button>
+
+</mat-dialog-actions>

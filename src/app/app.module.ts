@@ -10,6 +10,7 @@ import {MaterialModule} from '@app/material.module';
 import { SidebarModule } from './shared/components/sidebar/sidebar.module';
 import {MatIconModule} from '@angular/material/icon'; 
 import { HttpClientModule } from '@angular/common/http';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     SidebarModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { BomberosRoutingModule } from './bomberos-routing.module';
 import { BomberosComponent } from './bomberos.component';
 import { MaterialModule } from '@app/material.module';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
   declarations: [
-    BomberosComponent
+    BomberosComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
