@@ -4,9 +4,6 @@ mat-sidenav{
 }
 
 mat-sidenav-content{
-    background-color:darkgray;
-}
-
-mat-sidenav-container{
-    height: 100%;
+    background-color:lightgray;
+    min-height: 650px;
 }
